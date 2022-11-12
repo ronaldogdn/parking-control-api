@@ -31,8 +31,13 @@ public class ParkingSpotModel implements Serializable {
     private String apartment;
     @Column(nullable = false, length = 30)
     private String block;
+    
+    
+    public ParkingSpotModel() {
+		this.registrationDate = LocalDateTime.now();
+	}
 
-    public UUID getId() {
+	public UUID getId() {
         return id;
     }
 
